@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Sliding</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      #container {
+        transition-duration: 1s;
+        background: url(https://th.bing.com/th/id/OIP.CjQ5JC6KbqFuhlazNypJcAHaEK?w=301&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+        height: 100vh;
+        background-size: cover;
+      }
+      .img {
+        color: azure;
+        width: 100px;
+        height: 100px;
+      }
+      .prev {
+        position: absolute;
+        top: 50%;
+        transform: rotate(180deg);
+      }
+      .next {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        size: 20px;
+      }
+      .miniImg img {
+        height: 100px;
+      }
+      .miniImg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      .miniImg .myimg {
+        opacity: 0.5;
+      }
+      .miniImg .active {
+        position: relative;
+        z-index: 0;
+        opacity: 1;
+        scale: 1.1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img class="img prev" onclick="previous()" src="arrow.jpg" />
+      <img class="img next" onclick="next()" src="arrow.jpg" />
+    </div>
+    <div class="miniImg">
+      <img
+        class="myimg active"
+        src="https://th.bing.com/th/id/OIP.CjQ5JC6KbqFuhlazNypJcAHaEK?w=301&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+      />
+      <img
+        class="myimg"
+        src="https://th.bing.com/th/id/OIP.aL9ap7kxo02xpexoOhRcEAHaEK?w=306&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+      />
+      <img
+        class="myimg"
+        src="https://th.bing.com/th/id/OIP.VfqJFJtm2O47nxIJtDcuBAHaFA?w=235&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+      />
+      <img
+        class="myimg"
+        src="https://th.bing.com/th/id/OIP.-4Jg0bXw6kXwlFi4wWOSiAHaEK?w=301&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+      />
+    </div>
+    <script src="Slide.js"></script>
+  </body>
+</html>
